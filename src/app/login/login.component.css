@@ -1,0 +1,34 @@
+example-container {
+  display: flex;
+  flex-direction: column;
+  padding-top:40px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.center-card{
+  max-width:500px;
+  padding:40px;
+  display:inline-block;
+  margin-top:10%;
+}
+
+.center-wrap{
+  text-align:center;
+}
+

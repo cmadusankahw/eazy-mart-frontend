@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="center-wrap">
+    <mat-card class="center-card">
+      <h4>Register to the System</h4>
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Personal Details</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="First name" formControlName="firstName" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Last name" formControlName="lastName" required>
+            </mat-form-field>
+            <hr>
+            <mat-form-field>
+              <input matInput placeholder="Your Email" formControlName="email" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Contact Details</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Address Line 1" formControlName="addressl1" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Address Line 2" formControlName="addressl2" >
+            </mat-form-field>
+            <hr>
+            <mat-form-field>
+              <input matInput placeholder="Contact No (Ex:- 0712345678)" formControlName="contactno" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Confirmation</ng-template>
+          You are all set to go!
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+            <br><br>
+            <button mat-flat-button (click)="getData()" color="primary">Complete Sign Up</button>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </mat-card>
+  </div>
+</div>
