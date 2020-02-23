@@ -1,1 +1,43 @@
-<p>home works!</p>
+<div class="container">
+    <button mat-button  routerLink="events">
+        <mat-icon>schedule</mat-icon>
+        Schedule an Event</button>
+        <br>
+        <button mat-button  (click)="show()">
+            <mat-icon>schedule</mat-icon>
+            Show Available Events</button>
+
+        <br>
+        <br>
+        <table id="eventTable" class="table">
+            <tr>
+                <th> Event ID</th>
+                <th> Title</th>
+                <th> Event Category</th>
+                <th> Event Type (Open/Closed)</th>
+                <th> Date</th>
+                <th> Time</th>
+                <th> Venue</th>
+                <th> No of Participants</th>
+                <th> ACTION</th>
+            </tr>
+
+            <tr *ngFor="let event of events">
+                <td>{{event.id}}</td>
+                <td>{{event.title}}</td>
+                <td>{{event.category}}</td>
+                <td>{{event.type}}</td>
+                <td>{{event.date}}</td>
+                <td>{{event.time}}</td>
+                <td>{{event.venue}}</td>
+                <td>{{event.no_of_participants}}</td>
+                <td>
+                    <button mat-button  (click)="modifyEvent()">
+                        Show Available Events</button>
+                </td>
+
+
+            </tr>
+            
+        </table>
+</div>

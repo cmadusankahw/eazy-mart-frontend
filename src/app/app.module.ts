@@ -25,6 +25,7 @@ import {MatNativeDateModule} from '@angular/material';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { BottomSheetOverviewExampleSheetComponent } from './profile/bottom-sheet-overview-example-sheet/bottom-sheet-overview-example-sheet.component';
 import {MatListModule} from '@angular/material/list';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {MatListModule} from '@angular/material/list';
     MatDatepickerModule,
     MatNativeDateModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    FlexLayoutModule,
 
   ],
   providers: [],

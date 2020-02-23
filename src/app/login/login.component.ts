@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl,Validators} from '@angular/forms';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
             '';
   }
 
-  logIn(){
+  logIn() {
     alert('Successfully Logged In!');
+    alert(this.email.value);
+    alert(this.pword.value);
   }
 }

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<!--mat-toolbar color="primary">
 <mat-toolbar-row>
   <span routerLink="/">
     <mat-icon>whatshot</mat-icon>Evenza
@@ -36,6 +36,51 @@
     </button>
   </mat-menu>
 </mat-toolbar-row>
+</<!mat-toolbar>-->
+
+<mat-toolbar color="primary">
+
+  <span routerLink="/">
+    <mat-icon>whatshot</mat-icon>Evenza
+  </span>
+  <span class="example-spacer"></span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+     
+    <button mat-button routerLink="profile" color="accent">
+      <mat-icon>book</mat-icon>
+      Profile</button>
+   
+    <button mat-button routerLink="login">
+      <mat-icon>forward</mat-icon>
+      Log In</button>
+  
+    <button mat-button routerLink="register">
+      <mat-icon>person_add</mat-icon>
+      Register</button>
+
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+   <mat-icon>menu</mat-icon>
+  </button>
+
 </mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-button routerLink="profile" color="accent">
+      <mat-icon>book</mat-icon>
+      Profile</button>
+   <br>
+    <button mat-button routerLink="login">
+      <mat-icon>forward</mat-icon>
+      Log In</button>
+   <br>
+    <button mat-button routerLink="register">
+      <mat-icon>person_add</mat-icon>
+      Register</button>
+      
+  <!--<button mat-menu-item>Help</button>-->
+</mat-menu>
 
 <router-outlet></router-outlet>
